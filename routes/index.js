@@ -6,8 +6,6 @@ import FilesController from '../controllers/FilesController';
 
 const router = express.Router();
 
-const routeController = (app) => {
-  app.use('/', router);
 
   // App Controller
   router.get('/status', (req, res) => {
@@ -57,6 +55,5 @@ const routeController = (app) => {
   router.post('/files/:id/data', (req, res) => {
     FilesController.getFile(req, res);
   });
-};
 
-export default routeController;
+export default router;

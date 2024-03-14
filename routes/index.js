@@ -32,4 +32,8 @@ const router = express.Router();
 
   router.post('/files/:id/data', FilesController.getFile);
 
+  router.post('/users', UsersController.postNew);
+  
+  router.post('/files', FilesController.postUpload);
+
 export default router;
